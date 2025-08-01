@@ -1,0 +1,11 @@
+{
+  "/api": {
+    "target": "https://api.superlikerslabs.com/v1",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

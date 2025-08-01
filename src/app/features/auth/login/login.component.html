@@ -1,0 +1,85 @@
+<div class="flex items-center justify-center max-w-lg h-screen w-full pt-32">
+  <div class="w-full p-8 space-y-6">
+    <div class="w-full flex items-center justify-center">
+      <img
+        src="/assets/LOGO_MPG_V4_COMP_SF.png"
+        class="w-60 object-contain"
+        alt="Logo"
+      />
+    </div>
+    <h1 class="text-center font-medium text-xl">
+      ¡Bienvenido/a Modelo para Ganar!
+    </h1>
+    <span class="text-center block text-gray-400 text-lg"
+      >Ingresa tus datos:</span
+    >
+    <form (ngSubmit)="onSubmit()" autocomplete="off" class="space-y-6">
+      <div class="space-y-3">
+        <label for="name">Nombre de usuario *</label>
+        <input
+          type="text"
+          class="w-full rounded border border-white bg-transparent px-5 py-3"
+          placeholder="Nombre de usuario *"
+          [(ngModel)]="username"
+          name="name"
+          id="name"
+          required
+        />
+      </div>
+      <div class="space-y-3">
+        <label for="pass">Contraseña*</label>
+        <input
+          type="password"
+          class="w-full rounded border border-white bg-transparent px-5 py-3"
+          placeholder="Contraseña *"
+          [(ngModel)]="password"
+          name="pass"
+          id="pass"
+          required
+        />
+        <a routerLink="/" class="text-right text-[#56A19D] block italic"
+          >¿Olvidaste tu contraseña?</a
+        >
+      </div>
+      <div class="w-full mt-8 space-y-2 text-left text-sm font-Exo italic">
+        <label class="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            class="w-4 h-4 border border-[#7894D2] accent-[#7894D2] rounded-[4px] focus:ring-0"
+          />
+          <span
+            >He leído y acepto
+            <a routerLink="/" class="underline text-white"
+              >Términos y Condiciones</a
+            ></span
+          >
+        </label>
+
+        <label class="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            class="w-4 h-4 border border-[#7894D2] accent-[#7894D2] rounded-[4px] focus:ring-0"
+          />
+          <span
+            >He leído y acepto el
+            <a routerLink="/" class="underline text-white"
+              >Aviso de privacidad</a
+            ></span
+          >
+        </label>
+      </div>
+      <button
+        type="submit"
+        class="bg-[#5475BD] text-black w-full rounded-full h-12 shadow-lg shadow-black hover:opacity-70 transition-opacity mt-4"
+      >
+        Iniciar sesión
+      </button>
+    </form>
+    <button
+      (click)="register()"
+      class="bg-[#0E3762] text-white w-full rounded-full h-12 shadow-lg shadow-black hover:opacity-70 transition-opacity mt-4"
+    >
+      Registrar participante
+    </button>
+  </div>
+</div>

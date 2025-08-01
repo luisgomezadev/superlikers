@@ -1,0 +1,78 @@
+<div class="flex items-center justify-center max-w-lg h-screen w-full pt-40">
+  <div class="w-full p-8 space-y-6">
+    <div class="w-full flex items-center justify-center">
+      <img
+        src="/assets/LOGO_MPG_V4_COMP_SF.png"
+        class="w-60 object-contain"
+        alt="Logo"
+      />
+    </div>
+    <h1 class="text-center font-medium text-xl">
+      ¡Bienvenido/a Modelo para Ganar!
+    </h1>
+    <span class="text-center block text-gray-400 text-lg">Registrarse:</span>
+    <form (ngSubmit)="onSubmit()" autocomplete="off" class="space-y-6">
+      <div class="space-y-3">
+        <label for="nombreCompleto">Nombre completo *</label>
+        <input
+          type="text"
+          class="w-full rounded border border-white bg-transparent px-5 py-3"
+          placeholder="Nombre completo *"
+          [(ngModel)]="nombreCompleto"
+          name="nombreCompleto"
+          id="nombreCompleto"
+          required
+        />
+      </div>
+      <div class="space-y-3">
+        <label for="codigoCliente">Codigo del cliente *</label>
+        <input
+          type="text"
+          class="w-full rounded border border-white bg-transparent px-5 py-3"
+          placeholder="Codigo del cliente *"
+          [(ngModel)]="codigoCliente"
+          name="codigoCliente"
+          id="codigoCliente"
+          required
+        />
+      </div>
+      <div class="space-y-3">
+        <label for="email">Correo electrónico *</label>
+        <input
+          type="email"
+          class="w-full rounded border border-white bg-transparent px-5 py-3"
+          placeholder="Correo electrónico *"
+          [(ngModel)]="email"
+          name="email"
+          id="email"
+          required
+        />
+      </div>
+      <div class="space-y-3">
+        <label for="genero">Genero *</label>
+        <select
+          id="genero"
+          name="genero"
+          [(ngModel)]="genero"
+          required
+          class="w-full rounded border border-white bg-transparent px-5 py-3"
+        >
+          <option class="text-black" value="" disabled [selected]="!genero">
+            Selecciona una opción
+          </option>
+          <option class="text-black" value="masculino">Masculino</option>
+          <option class="text-black" value="femenino">Femenino</option>
+        </select>
+      </div>
+      <button
+        type="submit"
+        class="bg-[#5475BD] text-black w-full rounded-full h-12 shadow-lg shadow-black hover:opacity-70 transition-opacity mt-4"
+      >
+        Registrarse
+      </button>
+    </form>
+    <span class="text-center text-white block italic"
+      >Ya tienes cuenta? <a class="text-[#56A19D]" routerLink="/">Inicia sesión</a></span
+    >
+  </div>
+</div>
