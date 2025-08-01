@@ -13,8 +13,8 @@ import Swal from 'sweetalert2';
 })
 export class LoginComponent {
 
-  username = '12222222';
-  password = '123456789';
+  username = '';
+  password = '';
 
   constructor(private authService: AuthService, private router: Router) {}
 

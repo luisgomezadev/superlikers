@@ -1,7 +1,7 @@
 <section>
   <header
     class="w-full bg-[#385CAD] p-5 rounded-b-3xl flex items-center justify-between shadow-xl shadow-black mb-6"
-    style="box-shadow: -1px 0px 13px 1px rgba(255,255,255,0.75) inset"
+    style="box-shadow: -1px 0px 13px 1px rgba(255, 255, 255, 0.75) inset"
   >
     <div class="flex flex-col">
       <span class="font-semibold text-lg">{{ participant.name }}</span>
@@ -69,7 +69,15 @@
       </select>
     </div>
 
-    <div class="flex gap-6 overflow-x-auto p-4 bg-[#0A2440] rounded-xl">
+    <div
+      class="flex gap-6 overflow-x-auto h-[207px] p-4 bg-[#0A2440] rounded-xl custom-scrollbar"
+    >
+      @if (loading) {
+      <div class="flex flex-col gap-3 justify-center items-center w-full">
+        <div class="animate-spin rounded-full h-16 w-16 border-4 border-[#385CAD] border-t-transparent"></div>
+        <span>Cargando KPIs...</span>
+      </div>
+      } @else {
       <div
         *ngFor="let kpi of kpis"
         class="flex flex-col items-center min-w-[100px]"
@@ -90,10 +98,11 @@
           unitsColor="white"
         >
         </circle-progress>
-        <span class="text-center text-sm mt-2">
-          {{ capitalizar(kpi.nombre) }}
+        <span class="text-center text-sm">
+          {{ getNombre(kpi.nombre) }}
         </span>
       </div>
+      }
     </div>
   </div>
 </section>
