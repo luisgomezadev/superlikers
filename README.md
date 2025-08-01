@@ -1,27 +1,42 @@
-# Superlikers
+# 📦 SuperLikers
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+Esta es una app web para SuperLikers construida con [Angular](https://angular.io/) versión 17+.
 
-## Development server
+## 🚀 Requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Asegúrate de tener instaladas las siguientes herramientas:
 
-## Code scaffolding
+- [Node.js](https://nodejs.org/) (v18 o superior recomendado)
+- [Angular CLI](https://angular.io/cli)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+npm install -g @angular/cli
+```
 
-## Build
+## 📦 Instalación
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clona el repositorio:
 
-## Running unit tests
+```bash
+git clone https://github.com/luisgomezadev/superlikers.git
+cd superlikers
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Instala las dependencias:
 
-## Running end-to-end tests
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Ejecuta:
 
-## Further help
+```bash
+ng serve
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 🧪 Usuario de prueba
+
+Puedes ingresar con las siguientes credenciales:
+
+- **Usuario:** `12222222`
+- **Contraseña:** `123456789`
